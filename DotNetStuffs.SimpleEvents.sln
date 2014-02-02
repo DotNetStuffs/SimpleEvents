@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleEvents.Core", "source\apps\SimpleEvents.Core\SimpleEvents.Core.csproj", "{CF6CCD91-C42C-473E-960A-DAE02AE84989}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{BEAB51E1-02AF-4DC8-900B-C5BA3BF43E91}"
+	ProjectSection(SolutionItems) = preProject
+		tools\CustomDictionary.xml = tools\CustomDictionary.xml
+		tools\GlobalSuppressions.cs = tools\GlobalSuppressions.cs
+		tools\SimpleEventsIcon.ico = tools\SimpleEventsIcon.ico
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF6CCD91-C42C-473E-960A-DAE02AE84989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF6CCD91-C42C-473E-960A-DAE02AE84989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF6CCD91-C42C-473E-960A-DAE02AE84989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF6CCD91-C42C-473E-960A-DAE02AE84989}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
