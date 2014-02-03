@@ -1,15 +1,15 @@
 ﻿// **************************************************************************
-// <copyright file="IMessenger.cs" company="Jsinh.in">
-// Copyright © Jsinh 2014
+// <copyright file="IMessenger.cs" company="DotNetStuffs.in">
+// Copyright © DotNetStuffs.in 2014
 // </copyright>
 // ****************************************************************************
 // <author>Jaspalsinh Chauhan</author>
 // <email>jachauhan@gmail.com</email>
 // <date>25.01.2014</date>
-// <project>Jsinh.Messaging</project>
-// <web>http://jsinh.in</web>
+// <project>SimpleEvents</project>
+// <web>http://simpleevents.in</web>
 // <license>
-// See license.txt in this project or http://http://jsinh.in/License-MIT.txt
+// Visit http://simpleevents.in/license for more license details.
 // </license>
 // ****************************************************************************
 

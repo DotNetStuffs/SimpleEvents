@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <!-- General information -->
+    <id>SimpleEvents</id>
+    <version>1.0</version>
+    <title>Simple Events</title>
+    <authors>Jsinh</authors>
+    <owners>DotNetStuffs.in</owners>
+
+    <!-- License and project information -->
+    <licenseUrl>http://simpleevents.in/license</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>http://simpleevents.in</projectUrl>
+    <iconUrl>http://simpleevents.in/images/SiteLogo.png</iconUrl>
+
+    <summary>Simple implementation of event aggregation pattern for event / notificatoin raising and handling</summary>
+    <description>Simple implementation of event aggregation pattern for event / notificatoin raising and handling</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright © DotNetStuffs.in 2014</copyright>
+    <language>en-US</language>
+    <tags>simplevents, dotnetstuffs, events, event-aggregator, messaging, publisher-subscriber, aggregator, jsinh, messenger, pub, sub</tags>
+
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="WindowsBase" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="..\..\..\output\" target="lib\net40" />
+    <!--<file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />-->
+  </files>
+</package>
