@@ -50,8 +50,8 @@
       <Link>GlobalSuppressions.cs</Link>
     </Compile>
     <Compile Include="IExecuteWithObject.cs" />
-    <Compile Include="IMessenger.cs" />
-    <Compile Include="Messenger.cs" />
+    <Compile Include="IAggregator.cs" />
+    <Compile Include="Aggregator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeakAction.cs" />
     <Compile Include="WeakActionGeneric.cs" />

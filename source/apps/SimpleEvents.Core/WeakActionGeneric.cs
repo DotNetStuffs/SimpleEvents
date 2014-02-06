@@ -18,14 +18,12 @@ namespace DotNetStuffs.SimpleEvents
     #region Namespace
 
     using System;
-    using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     
     #endregion
 
     /// <summary>
-    /// Stores an Action without causing a hard reference
-    /// to be created to the Action's owner. The owner can be garbage collected at any time.
+    /// Stores an Action without causing a hard reference to be created to the Action's owner. The owner can be garbage collected at any time.
     /// </summary>
     /// <typeparam name="T">The type of the Action's parameter.</typeparam>
     public class WeakAction<T> : WeakAction, IExecuteWithObject
@@ -46,7 +44,7 @@ namespace DotNetStuffs.SimpleEvents
         /// </summary>
         /// <param name="action">The action that will be associated to this instance.</param>
         public WeakAction(Action<T> action)
-            : this(action == null ? null : action.Target, action)
+            : this(null == action ? null : action.Target, action)
         {
         }
 
@@ -61,11 +59,9 @@ namespace DotNetStuffs.SimpleEvents
             if (action.Method.IsStatic)
             {
                 this.staticAction = action;
-
-                if (target != null)
+                if (null != target)
                 {
-                    // Keep a reference to the target to control the
-                    // WeakAction's lifetime.
+                    // Keep a reference to the target to control the WeakAction's lifetime.
                     this.Reference = new WeakReference(target);
                 }
 
@@ -88,30 +84,28 @@ namespace DotNetStuffs.SimpleEvents
         {
             get
             {
-                return this.staticAction != null ? this.staticAction.Method.Name : this.Method.Name;
+                return null != this.staticAction ? this.staticAction.Method.Name : this.Method.Name;
             }
         }
 
         /// <summary>
-        /// Gets a value indicating whether the Action's owner is still alive, or if it was collected
-        /// by the Garbage Collector already.
+        /// Gets a value indicating whether the Action's owner is still alive, or if it was collected by the Garbage Collector already.
         /// </summary>
         public override bool IsAlive
         {
             get
             {
-                if (this.staticAction == null
-                    && this.Reference == null)
+                if (null == this.staticAction && null == this.Reference)
                 {
                     return false;
                 }
 
-                if (this.staticAction == null)
+                if (null == this.staticAction)
                 {
                     return this.Reference.IsAlive;
                 }
 
-                return this.Reference == null || this.Reference.IsAlive;
+                return null == this.Reference || this.Reference.IsAlive;
             }
         }
         
@@ -120,8 +114,7 @@ namespace DotNetStuffs.SimpleEvents
         #region Methods
 
         /// <summary>
-        /// Executes the action. This only happens if the action's owner
-        /// is still alive.
+        /// Executes the action. This only happens if the action's owner is still alive.
         /// </summary>
         public new void Execute()
         {
@@ -130,13 +123,12 @@ namespace DotNetStuffs.SimpleEvents
         }
 
         /// <summary>
-        /// Executes the action. This only happens if the action's owner
-        /// is still alive.
+        /// Executes the action. This only happens if the action's owner is still alive.
         /// </summary>
         /// <param name="parameter">A parameter to be passed to the action.</param>
         public void Execute(T parameter)
         {
-            if (this.staticAction != null)
+            if (null != this.staticAction)
             {
                 this.staticAction(parameter);
                 return;
@@ -149,20 +141,19 @@ namespace DotNetStuffs.SimpleEvents
                 return;
             }
 
-            if (this.Method != null && this.ActionReference != null && actionTarget != null)
+            if (null != this.Method && null != this.ActionReference && null != actionTarget)
             {
                 this.Method.Invoke(actionTarget, new object[] { parameter });
             }
         }
 
         /// <summary>
-        /// Executes the action with a parameter of type object. This parameter
-        /// will be casted to T. This method implements <see cref="IExecuteWithObject.ExecuteWithObject" />
-        /// and can be useful if you store multiple WeakAction{T} instances but don't know in advance
-        /// what type T represents.
+        /// Executes the action with a parameter of type object.
+        /// This parameter will be casted to T.
+        /// This method implements <see cref="IExecuteWithObject.ExecuteWithObject" /> and can be useful
+        /// if you store multiple WeakAction{T} instances but don't know in advance what type T represents.
         /// </summary>
-        /// <param name="parameter">The parameter that will be passed to the action after
-        /// being casted to T.</param>
+        /// <param name="parameter">The parameter that will be passed to the action after being casted to T.</param>
         public void ExecuteWithObject(object parameter)
         {
             var parameterCasted = (T)parameter;
@@ -171,8 +162,7 @@ namespace DotNetStuffs.SimpleEvents
 
         /// <summary>
         /// Sets all the actions that this WeakAction contains to null,
-        /// which is a signal for containing objects that this WeakAction
-        /// should be deleted.
+        /// which is a signal for containing objects that this WeakAction should be deleted.
         /// </summary>
         public new void MarkForDeletion()
         {

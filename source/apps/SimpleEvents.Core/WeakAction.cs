@@ -24,8 +24,7 @@ namespace DotNetStuffs.SimpleEvents
     #endregion
 
     /// <summary>
-    /// Stores an <see cref="Action" /> without causing a hard reference
-    /// to be created to the Action's owner. The owner can be garbage collected at any time.
+    /// Stores an <see cref="Action" /> without causing a hard reference to be created to the Action's owner. The owner can be garbage collected at any time.
     /// </summary>
     public class WeakAction
     {
@@ -45,7 +44,7 @@ namespace DotNetStuffs.SimpleEvents
         /// </summary>
         /// <param name="action">The action that will be associated to this instance.</param>
         public WeakAction(Action action)
-            : this(action == null ? null : action.Target, action)
+            : this(null == action ? null : action.Target, action)
         {
         }
 
@@ -60,11 +59,9 @@ namespace DotNetStuffs.SimpleEvents
             if (action.Method.IsStatic)
             {
                 this.staticAction = action;
-
-                if (target != null)
+                if (null != target)
                 {
-                    // Keep a reference to the target to control the
-                    // WeakAction's lifetime.
+                    // Keep a reference to the target to control the WeakAction's lifetime.
                     this.Reference = new WeakReference(target);
                 }
 
@@ -94,29 +91,28 @@ namespace DotNetStuffs.SimpleEvents
         {
             get
             {
-                return this.staticAction != null ? this.staticAction.Method.Name : this.Method.Name;
+                return null != this.staticAction ? this.staticAction.Method.Name : this.Method.Name;
             }
         }
 
         /// <summary>
-        /// Gets a value indicating whether the Action's owner is still alive, or if it was collected
-        /// by the Garbage Collector already.
+        /// Gets a value indicating whether the Action's owner is still alive, or if it was collected by the Garbage Collector already.
         /// </summary>
         public virtual bool IsAlive
         {
             get
             {
-                if (this.staticAction == null && this.Reference == null)
+                if (null == this.staticAction && null == this.Reference)
                 {
                     return false;
                 }
 
-                if (this.staticAction == null)
+                if (null == this.staticAction)
                 {
                     return this.Reference.IsAlive;
                 }
 
-                return this.Reference == null || this.Reference.IsAlive;
+                return null == this.Reference || this.Reference.IsAlive;
             }
         }
 
@@ -127,7 +123,7 @@ namespace DotNetStuffs.SimpleEvents
         {
             get
             {
-                return this.staticAction != null;
+                return null != this.staticAction;
             }
         }
 
@@ -139,7 +135,7 @@ namespace DotNetStuffs.SimpleEvents
         {
             get
             {
-                return this.Reference == null ? null : this.Reference.Target;
+                return null == this.Reference ? null : this.Reference.Target;
             }
         }
 
@@ -184,7 +180,7 @@ namespace DotNetStuffs.SimpleEvents
         {
             get
             {
-                return this.ActionReference == null ? null : this.ActionReference.Target;
+                return null == this.ActionReference ? null : this.ActionReference.Target;
             }
         }
         
@@ -198,20 +194,19 @@ namespace DotNetStuffs.SimpleEvents
         /// </summary>
         public void Execute()
         {
-            if (this.staticAction != null)
+            if (null != this.staticAction)
             {
                 this.staticAction();
                 return;
             }
 
             var actionTarget = this.ActionTarget;
-
             if (!this.IsAlive)
             {
                 return;
             }
 
-            if (this.Method != null && this.ActionReference != null && actionTarget != null)
+            if (null != this.Method && null != this.ActionReference && null != actionTarget)
             {
                 this.Method.Invoke(actionTarget, null);
             }

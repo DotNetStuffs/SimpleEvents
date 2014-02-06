@@ -33,13 +33,11 @@ namespace DotNetStuffs.SimpleEvents
         /// <summary>
         /// Executes an action.
         /// </summary>
-        /// <param name="parameter">A parameter passed as an object,
-        /// to be casted to the appropriate type.</param>
+        /// <param name="parameter">A parameter passed as an object, to be casted to the appropriate type.</param>
         void ExecuteWithObject(object parameter);
 
         /// <summary>
-        /// Deletes all references, which notifies the cleanup method
-        /// that this entry must be deleted.
+        /// Deletes all references, which notifies the cleanup method that this entry must be deleted.
         /// </summary>
         void MarkForDeletion();
     }

@@ -3,7 +3,7 @@
   <metadata>
     <!-- General information -->
     <id>SimpleEvents</id>
-    <version>1.0</version>
+    <version>1.1</version>
     <title>Simple Events</title>
     <authors>Jsinh</authors>
     <owners>DotNetStuffs.in</owners>
@@ -16,10 +16,10 @@
 
     <summary>Simple implementation of event aggregation pattern for event / notificatoin raising and handling</summary>
     <description>Simple implementation of event aggregation pattern for event / notificatoin raising and handling</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Internal modifications and name changed for entities</releaseNotes>
     <copyright>Copyright © DotNetStuffs.in 2014</copyright>
     <language>en-US</language>
-    <tags>simplevents, dotnetstuffs, events, event-aggregator, messaging, publisher-subscriber, aggregator, jsinh, messenger, pub, sub</tags>
+    <tags>simplevents, dotnetstuffs, events, event-aggregator, messaging, publisher-subscriber, aggregator, jsinh, messenger, aggregator pub, sub</tags>
 
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" targetFramework="" />
