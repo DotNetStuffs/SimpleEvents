@@ -1,17 +1,22 @@
-﻿// **************************************************************************
-// <copyright file="Aggregator.cs" company="DotNetStuffs.in">
-// Copyright © DotNetStuffs.in 2014
+﻿// ************************************************************************************
+// <copyright file="Aggregator.cs" company="GalaSoft Laurent Bugnion">
+// Copyright © GalaSoft Laurent Bugnion 2009-2014
 // </copyright>
-// ****************************************************************************
-// <author>Jaspalsinh Chauhan</author>
-// <email>jachauhan@gmail.com</email>
-// <date>25.01.2014</date>
-// <project>SimpleEvents</project>
-// <web>http://simpleevents.in</web>
+// ************************************************************************************
+// <author>Laurent Bugnion</author>
+// <email>laurent@galasoft.ch</email>
+// <date>13.4.2009</date>
+// <project>GalaSoft.MvvmLight.Messaging</project>
+// <web>http://www.galasoft.ch</web>
 // <license>
-// Visit http://simpleevents.in/license for more license details.
+// The work is originally forked / taken from GalaSoft.MvvmLight toolkit codebase 
+// which is licensed under MIT license and remains copyright work of Laurent Bugnion.
+// See license.txt in this project or visit http://www.galasoft.ch/license_MIT.txt
+//
+// Note: This entity and members within were renamed which was originally named 
+// as "Messenger" in author's original work.
 // </license>
-// ****************************************************************************
+// ************************************************************************************
 
 namespace DotNetStuffs.SimpleEvents
 {
@@ -26,7 +31,7 @@ namespace DotNetStuffs.SimpleEvents
     #endregion
 
     /// <summary>
-    /// The Aggregator is a class allowing objects to exchange notification.
+    /// Aggregator is a class allowing objects to exchange notification.
     /// </summary>
     public class Aggregator : IAggregator
     {

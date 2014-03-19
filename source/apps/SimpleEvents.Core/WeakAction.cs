@@ -1,17 +1,19 @@
-﻿// **************************************************************************
-// <copyright file="WeakAction.cs" company="DotNetStuffs.in">
-// Copyright © DotNetStuffs.in 2014
+﻿// ************************************************************************************
+// <copyright file="WeakAction.cs" company="GalaSoft Laurent Bugnion">
+// Copyright © GalaSoft Laurent Bugnion 2009-2014
 // </copyright>
-// ****************************************************************************
-// <author>Jaspalsinh Chauhan</author>
-// <email>jachauhan@gmail.com</email>
-// <date>25.01.2014</date>
-// <project>SimpleEvents</project>
-// <web>http://simpleevents.in</web>
+// ************************************************************************************
+// <author>Laurent Bugnion</author>
+// <email>laurent@galasoft.ch</email>
+// <date>18.9.2009</date>
+// <project>GalaSoft.MvvmLight</project>
+// <web>http://www.galasoft.ch</web>
 // <license>
-// Visit http://simpleevents.in/license for more license details.
+// The work is originally forked / taken from GalaSoft.MvvmLight toolkit codebase 
+// which is licensed under MIT license and remains copyright work of Laurent Bugnion.
+// See license.txt in this project or visit http://www.galasoft.ch/license_MIT.txt
 // </license>
-// ****************************************************************************
+// ************************************************************************************
 
 namespace DotNetStuffs.SimpleEvents
 {
