@@ -8,17 +8,17 @@ logo: SiteLogo.png
 ######################################################################
 # Site URL change it to your real URL when committing
 ######################################################################
-url: http://simpleevents.in
+url: http://jsinh.in/simpleevents
 
 ######################################################################
 # Owner / Site information
 ######################################################################
 owner:
-  name: DotNetStuffs
+  name: Jsinh
   email: jachauhan@gmail.com
-  twitter: jcdotlife
+  twitter: _jsinh
   stackexchange: jsinh
-  github: dotnetstuffs/simpleevents
+  github: jsinh/simpleevents
   google_plus: jachauhan
 
 ######################################################################
@@ -43,7 +43,7 @@ google_analytics: UA-47710194-1
 # Jekyll stuffs
 ######################################################################
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 
 
 ######################################################################
