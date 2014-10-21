@@ -1,14 +1,14 @@
 ######################################################################
 # General configurations
 ######################################################################
-title: Simple Events by DotNetStuffs
-description: All about Simple Events - An effort by DotNetStuffs
+title: Simple Events
+description: Passing data between entities - No strings attached !!
 logo: SiteLogo.png
 
 ######################################################################
 # Site URL change it to your real URL when committing
 ######################################################################
-url: http://jsinh.in/simpleevents
+url: http://localhost:4000
 
 ######################################################################
 # Owner / Site information
@@ -34,17 +34,18 @@ links:
   - title: About
     url: /about
     external: false
+
 ######################################################################
 # External support integration
 ######################################################################
 disqus_shortname: simpleevents
 google_analytics: UA-47710194-1
+
 ######################################################################
 # Jekyll stuffs
 ######################################################################
 markdown: redcarpet
 highlighter: pygments
-
 
 ######################################################################
 # Site configuration

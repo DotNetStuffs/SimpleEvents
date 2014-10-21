@@ -1,34 +1,41 @@
 ---
 layout: page
-title: Home
-description: "Simple / easy to use implementation of event aggregation pattern"
-tags: [dotnetstuffs, simpleevents, jsinh, jaspalsinh, jachauhan, events, eventaggregator, nuget, .net]
+title: Hello
+description: "Pass data between loosely coupled entities using hybrid implementation of event aggregation and mediator pattern"
+tags: [simpleevents, jsinh, jaspalsinh, jachauhan, events, eventaggregator, nuget, mediator, pattern, design-pattern, C#, csharp .net]
 ---
-##All righty. Glad for your interest in Simple events !!
+##Thank you for showing interest in using Simple events !!
 
-Simple events is a small .NET footprint assembly that takes care of your event needs.
-It provides simple implementation for event aggregation pattern. It is [hosted @ NuGet gallery][51].
+'Simple events' is a small .NET (not portable yet) footprint library created using C# that helps passing data or message between loosely coupled entities.
+It provides advantages of both mediator pattern and event aggregation pattern.
 
-More on Simple events:
+The primary source code is developed by and copyright of [Laurent Bugnion][01] who has provide this routine as part of [MVVM Light Toolkit][02]
 
-**Hello there...**
+ It is [hosted @ NuGet gallery][51].
+
+Usage information for Simple events:
+
+**What...**
 
 * [What is it by the way?][11]
 * [Its all about...][12]
 * [Relationships are complicated !!][13]
 
-**Why am I here?**
+**Why...**
 
 * [Fancy decoupling may be...][21]
 * [Or garbage collection is exhausting][22]
   
-**Show me some mooovez**
+**How... Show me some code !!**
 
 * [Many ways, same thing][31]
 * [Subscribe anyone?][32]
 * [Publish - blip, blap, bloop][33]
 * [Unsubscribing - hey backoff][34]
 * [Reset - we need to talk][35]
+
+[01]: http://www.galasoft.ch/
+[02]: http://www.galasoft.ch/mvvm
 
 [11]: {{site.url}}/docs/introduction
 [12]: {{site.url}}/docs/itsallabout

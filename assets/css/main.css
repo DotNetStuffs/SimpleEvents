@@ -221,12 +221,12 @@ pre, blockquote {
 .creds {
     float: right;
     text-align: right;
-    width: 65%;
+    width: 75%;
 }
 
 .gototop {
     float: left;
-    width: 30%;
+    width: 25%;
 }
 
 /* ==========================================================================
