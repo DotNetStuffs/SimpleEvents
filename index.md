@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Hello
-description: "Pass data between loosely coupled entities using hybrid implementation of event aggregation and mediator pattern"
+title: Home
+description: "Pass data and messages between loosely coupled entities using hybrid implementation of event aggregation and mediator pattern"
 tags: [simpleevents, jsinh, jaspalsinh, jachauhan, events, eventaggregator, nuget, mediator, pattern, design-pattern, C#, csharp .net]
 ---
-##Thank you for showing interest in using Simple events !!
+##Thank you for showing interest in using Simple events
 
-'Simple events' is a small .NET (not portable yet) footprint library created using C# that helps passing data or message between loosely coupled entities.
+'Simple Events' is a small footprint .NET library (not portable) created in C# that helps passing data and messages between loosely coupled entities.
 It provides advantages of both mediator pattern and event aggregation pattern.
 
 The primary source code is developed by and copyright of [Laurent Bugnion][01] who has provide this routine as part of [MVVM Light Toolkit][02]
 
  It is [hosted @ NuGet gallery][51].
 
-Usage information for Simple events:
+Usage information for Simple Events:
 
 **What...**
 
@@ -26,7 +26,7 @@ Usage information for Simple events:
 * [Fancy decoupling may be...][21]
 * [Or garbage collection is exhausting][22]
   
-**How... Show me some code !!**
+**How... (Show me some code)**
 
 * [Many ways, same thing][31]
 * [Subscribe anyone?][32]

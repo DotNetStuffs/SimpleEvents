@@ -11,7 +11,7 @@ Roadmap for SimpleEvents library is as below listed:
 
 * <del>Get listed on NuGet package gallery so it can be used by people</del> [[Done @ 25th Jan, 2014][2]]
 
-* <del>Rename publicaly exposed entities to better relate to pattern specification, no offense.</del> [Done @ 5th Feb, 2014]
+* <del>Rename publicaly exposed entities to give better resemblance with pattern [Mediator and Event Aggregation] specification, no offense to orignal author.</del> [Done @ 5th Feb, 2014]
 
 * <del>Modify or refactor publicaly exposed calls documentation</del> and add possible exception details in XML comments if any [Done @ 5th Feb, 2014] and [Pending]
 

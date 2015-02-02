@@ -44,7 +44,7 @@ google_analytics: UA-47710194-1
 ######################################################################
 # Jekyll stuffs
 ######################################################################
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 ######################################################################
@@ -52,3 +52,9 @@ highlighter: pygments
 ######################################################################
 permalink: /:title
 relative_permalinks: true
+
+######################################################################
+# Command to run jekyll locally
+######################################################################
+# Jekyll way: jekyll serve
+# Bulde way: bundle exec jekyll serve
